@@ -49,3 +49,4 @@ var typed = new Typed(".auto-input", {
             cursorChar: '|',
             loopCount: Infinity
         })
+/*==================== SWIPER JS ====================*/
