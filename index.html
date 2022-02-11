@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ShreYash Blog</title>
+    <!--====================  ====================-->
+    <!--link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" /-->
+    <!--link rel="stylesheet" href="assets/css/build.css" type="text/css" media="all" /-->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <!--==================== HEADER ====================-->
+    <nav id="header" class="fixed w-full z-10 top-0">
+        <div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, blue var(--scroll), transparent 0);"></div>
+        <div class="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
+            <div class="pl-4">
+                <img class="pointer-events-none " src="assets/img/logo/logo.svg" alt="logo- Shre Yash" />
+            </div>
+            <div class="block lg:hidden pr-4">
+                <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-blue-700 hover:border-blue-700 appearance-none focus:outline-none">
+                    <svg class="fill-current h-3 w-3" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="75" viewBox="0 0 50 50" fill="#1d4ed8">
+                        <path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-gray-100 md:bg-transparent z-20" id="nav-content">
+                <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                    <li class="mr-3">
+                        <a class="inline-block py-2 px-4 text-blue-700 font-bold no-underline" href="#">Home</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-gray-600 no-underline hover:text-blue-700 hover:text-underline py-2 px-4" href="#">About</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-gray-600 no-underline hover:text-blue-700 hover:text-underline py-2 px-4" href="#">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--==================== HOME ====================-->
+    <section class="container w-full md:max-w-3xl mx-auto pt-20">
+        <div class="text-center">
+            <img src="https://raw.githubusercontent.com/iamshre-yash/myProjects/main/assets/shreyash.webp" class="rounded-full w-32 mb-4 mx-auto drop-shadow-2xl" alt="ShreYash" />
+            <h5 class="text-xl font-medium leading-tight mb-2">ShreYash</h5>
+            <span class="auto-input">Front End Developer</span>
+        </div>
+        
+    </section>
+    <!--==================== FOOTER ====================-->
+    <footer class="bg-white border-t border-gray-400 shadow">
+        <div class="text-center p-4">
+            © 2021 Copyright:
+            <a class="text-gray-800" href="https://github.com/iamshre-yash">Shre Yash</a>
+        </div>
+    </footer>
+    <!--==================== JS ====================-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
