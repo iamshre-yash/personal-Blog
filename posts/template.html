@@ -1,29 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ShreYash Blog</title>
-    <meta name="description" content="ShreYash Blog is my personal Blog Website which provide technology and programming related tips.">
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <meta name="description" content=" ">
+
     <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.ico">
     <link rel="icon" type="image/png" href="assets/img/logo/favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="assets/img/logo/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="assets/img/logo/android-chrome-192x192.png" sizes="192x192">
     <link rel="icon" type="image/png" href="assets/img/logo/android-chrome-512x512.png" sizes="512x512">
     <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" />
-    <!--script src="https://cdn.tailwindcss.com"></script-->
-    <!--link rel="stylesheet" href="assets/css/tailwind.css" type="text/css" media="all" /-->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+<body class="bg-gray-100 font-mono leading-normal tracking-normal">
     <!--==================== HEADER ====================-->
     <nav id="header" class="fixed w-full z-10 top-0">
         <div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, blue var(--scroll), transparent 0);"></div>
         <div class="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
             <div class="pl-4">
-                <img class="pointer-events-none " src="assets/img/logo/logo.svg" alt="logo- Shre Yash" />
+                <img class="pointer-events-none " src="../assets/img/logo/logo.svg" alt="logo- Shre Yash" />
             </div>
             <div class="block lg:hidden pr-4">
                 <button id="nav-toggle" class="flex items-center px-2 py-1 border rounded text-gray-500 border-gray-600 hover:text-blue-700 hover:border-blue-700 appearance-none focus:outline-none">
@@ -47,76 +45,40 @@
             </div>
         </div>
     </nav>
-    <!--==================== HOME ====================-->
-    <section class="container w-full md:max-w-3xl mx-auto pt-20">
-        <div class="text-center">
-            <img src="https://raw.githubusercontent.com/iamshre-yash/myProjects/main/assets/shreyash.webp" class="rounded-full w-32 mb-4 mx-auto drop-shadow-2xl" alt="ShreYash" />
-            <h5 class="text-xl font-medium leading-tight mb-2">ShreYash</h5>
-            <span class="auto-input">Front End Developer</span>
+    <!--==================== blog ====================-->
+    <!--Container-->
+    <div class="container w-full md:max-w-3xl mx-auto pt-20 font-mono">
+        <div class="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal" style="font-family:Georgia,serif;">
+            <!--Title-->
+            <div class="font-mono">
+                <h1 class="font-bold font-mono break-normal text-gray-900 pt-6 pb-2 text-4xl md:text-4xl">title</h1>
+                <p class="text-sm md:text-base font-normal text-gray-600">Published 11 February 2022</p>
+                <h2 class="font-semibold font-mono break-normal text-gray-900 pt-6 pb-2 text-2xl md:text-4xl">description</h2>
+            </div>
+            <!--Post Content-->
+            <img src="" alt="post cover img" class="object-cover h-full w-full">
+            <p class="text-sm font-sans">img description</p>
+            <p class="py-6 text-lg">
+
+
+            </p>
+            <!--/ Post Content-->
         </div>
-        <!--==================== Blog Posts ====================-->
-        <h1 class="font-sans font-bold text-2xl md:text-3xl leading-none mt-9 mb-4 text-center text-blue-700">New Posts</h1>
-        
-        <div class="mx-auto px-4 py-4 max-w-xl my-auto">
-            <div class="bg-gray-50 md:bg-white md:shadow-xl rounded-lg mb-6 ">
-                <a target="_blank" rel="noreferrer noopener" href="posts/post1">
-                    <div class="md:flex-shrink-0">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZsHZ65pNsvWq1MK6ryo_s_UwCkJRUmUJR4Q&usqp=CAU" alt="post cover img" class="object-cover h-full w-full rounded-lg rounded-b-none">
-                    </div>
-                </a>
-                <div class="py-1">
-                    <div class="p-4">
-                        <h2 class="truncate font-bold mb-2 md:mt-4 text-2xl text-gray-800 tracking-normal">The DOJ’s $3.6B Bitcoin Seizure Shows How Hard It Is to Launder Crypto</h2>
-                        <p class="break-words text-sm text-gray-700 px-2 mr-1">A couple allegedly used a “laundry list” of technical measures to cover their tracks. They didn’t work.</p>
-                    </div>
-                    <div class="flex items-center justify-between p-2 md:p-4 md:mx-4">
-                        <a target="_blank" rel="noreferrer noopener" href="https://project.ishreyash.com/">
-                            <div class="flex items-center">
-                                <div class="text-sm ml-2">
-                                    <p class="text-black leading-none">Shre Yash</p>
-                                    <p class="text-gray-700">February 11, 2022</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a target="_blank" rel="post link" href="posts/post1" class="bg-blue-500 hover:bg-blue-600 text-white rounded-full px-8 py-2">
-                            Read More
-                        </a>
-                    </div>
-                </div>
+        <!--Divider-->
+        <hr class="border-b-2 border-gray-400 mb-8 mx-4">
+        <!--Next & Prev Links-->
+        <div class="font-mono flex justify-between content-center px-4 pb-12">
+            <div class="text-left">
+                <span class="text-xs md:text-sm font-normal text-gray-600">&lt; Previous Post</span><br>
+                <p><a href="#" class="break-normal text-base md:text-sm text-blue-500 font-bold no-underline hover:underline">Blog title</a></p>
             </div>
-
-            <!--div class="bg-gray-50 md:bg-white md:shadow-xl rounded-lg mb-6 ">
-                <a target="_blank" rel="noreferrer noopener" href="#">
-                    <div class="md:flex-shrink-0">
-                        <img src="#" alt="post cover img" class="object-cover h-full w-full rounded-lg rounded-b-none">
-                    </div>
-                </a>
-                <div class="py-1">
-                    <div class="p-4">
-                        <h2 class="truncate font-bold mb-2 md:mt-4 text-2xl text-gray-800 tracking-normal">Post Title.</h2>
-                        <p class="break-words text-sm text-gray-700 px-2 mr-1">Post description</p>
-                    </div>
-                    <div class="flex items-center justify-between p-2 md:p-4 md:mx-4">
-                        <a target="_blank" rel="noreferrer noopener" href="#">
-                            <div class="flex items-center">
-                                <div class="text-sm ml-2">
-                                    <p class="text-black leading-none">Shre Yash</p>
-                                    <p class="text-gray-700">February 11, 2022</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a target="_blank" rel="post link" href="#" class="bg-blue-500 hover:bg-blue-600 text-white rounded-full px-8 py-2">
-                            Read More
-                        </a>
-                    </div>
-                </div>
+            <div class="text-right">
+                <span class="text-xs md:text-sm font-normal text-gray-600">Next Post &gt;</span><br>
+                <p><a href="#" class="break-normal text-base md:text-sm text-blue-500 font-bold no-underline hover:underline">Blog title</a></p>
             </div>
-        </div-->
-
-
-
-    </section>
-    <!--==================== FOOTER ====================-->
+        </div>
+        <!--/Next & Prev Links-->
+    </div>
     <footer class="bg-white border-t border-gray-400 shadow">
         <div class="mt-6 pb-6 lg:pb-2 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between">
             <a class="link" href="https://github.com/iamshre-yash"><svg class="h-5 fill-current text-gray-600 hover:text-blue-700" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -144,7 +106,8 @@
     </footer>
     <!--==================== JS ====================-->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
 </body>
 
-</html>
+
+</body>
