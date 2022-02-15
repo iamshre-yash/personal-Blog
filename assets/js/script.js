@@ -18,7 +18,7 @@ document.addEventListener('scroll', function() {
 
     /*Apply classes for slide in bar*/
     scrollpos = window.scrollY;
-    if (scrollpos > 10) {
+    if (scrollpos > 2) {
         header.classList.add("bg-white");
         header.classList.add("shadow");
         navcontent.classList.remove("bg-gray-100");
