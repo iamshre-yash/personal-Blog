@@ -13,115 +13,123 @@
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/ishre-yash/ishre-yash/main/android-chrome-512x512.png" sizes="512x512">
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" />
-    <!-- <link rel="stylesheet" href="assets/css/tailwind.css" type="text/css" media="all" /> -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
+    <link rel="stylesheet" href="assets/css/tailwind.css" type="text/css" media="all" />
 </head>
 
 <body class="bg-gray-100 font-poppins leading-normal tracking-normal">
-
     <!--==================== HEADER ====================-->
-    <header id="header" class="fixed w-full">
-        <nav class="fixed flex flex-wrap items-center justify-between w-full py-0 md:py-0 px-2 text-lg text-white bg-slate-900 drop-shadow-2xl mb-4 ">
-
+    <nav id="header" class="fixed w-full">
+        <div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, blue var(--scroll), transparent 0);"></div>
+        <div class="fixed flex flex-wrap items-center justify-between w-full py-0 md:py-0 px-2 mb-4 " id="nav-content">
+            <a href="https://ishreyash.com/">
+                <img class="cursor-progress" src="https://raw.githubusercontent.com/ishre-yash/ishre-yash/main/logoName.svg" alt="">
+            </a>
             <svg xmlns="http://www.w3.org/2000/svg" id="menu-button" class="w-10 cursor-pointer md:hidden block hover:text-blue-700 hover:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
 
-            <a href="#">
-                <img src="https://raw.githubusercontent.com/ishre-yash/ishre-yash/main/logoName.svg" alt="">
-            </a>
-
-            <a class="h-12 ml-16 m-2 block md:hidden" href="https://github.com/ishre-yash">
-                <img class="rounded-full border border-gray-100 shadow-sm h-full" src="https://raw.githubusercontent.com/ishre-yash/ishre-yash/main/shreyash.webp" />
-            </a>
-
             <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
-                <ul class=" pt-4 text-base text-white md:flex md:justify-between md:pt-0">
+                <ul class="pt-2 text-base text-black md:flex md:justify-between md:pt-0">
                     <li>
-                        <a class="md:p-4 py-2 block font-bold hover:text-blue-700 text-xl" href="https://blog.ishreyash.com/">Home</a>
+                        <a class="md:p-4 py-2 block font-poppins font-medium text-blue-700 text-xl" href="https://blog.ishreyash.com/">Home</a>
                     </li>
                     <li>
-                        <a class="md:p-4 py-2 block font-bold hover:text-blue-700 text-xl" href="https://project.ishreyash.com/">About</a>
+                        <a class="md:p-4 py-2 block font-poppins font-medium hover:text-blue-700 text-xl" href="https://project.ishreyash.com/">About</a>
                     </li>
                     <li>
-                        <a class="md:p-4 py-2 block font-bold hover:text-blue-700 text-xl" href="https://ishreyash.com/">Portfolio</a>
+                        <a class="md:p-4 py-2 block font-poppins font-medium hover:text-blue-700 text-xl" href="https://ishreyash.com/">Project</a>
+                    </li>
+
+                    <li>
+                        <a class="md:p-4 py-2 block font-poppins font-medium hover:text-blue-700 text-xl" href="https://ishreyash.com/#contact">Contact Me</a>
                     </li>
                 </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-
-    </header>
-    <!--==================== HOME ====================-->
-    <section class="container w-full mx-auto pt-20 lg:pt-28">
-        <h1 class="font-bold text-2xl md:text-3xl leading-none mt-9 mb-4 text-center text-blue-700">TOP PICKS</h1>
-        <!--==================== Blog Posts ====================-->
-        <section class="lg:flex">
-            <div class="container mx-auto px-4 py-4 max-w-xl my-auto">
-                <div class="bg-gray-50 md:bg-white md:shadow-xl rounded-lg mb-6">
-                    <a target="_blank" rel="noreferrer noopener" href="posts/demo">
-                        <div class="md:flex-shrink-0">
-                            <img src="https://cdn.pixabay.com/photo/2018/06/01/15/38/blockchain-3446557__340.jpg" alt="post cover img" class="object-cover h-full w-full rounded-lg rounded-b-none">
-                        </div>
-                    </a>
-                    <div class="py-1">
-                        <div class="p-4">
-                            <h2 class="truncate font-bold mb-2 md:mt-4 text-2xl text-gray-800 tracking-normal">The DOJ’s $3.6B Bitcoin Seizure Shows How Hard It Is to Launder Crypto</h2>
-                            <p class="break-words text-sm text-gray-700 px-2 mr-1">A couple allegedly used a “laundry list” of technical measures to cover their tracks. They didn’t work.</p>
-                        </div>
-                        <div class="flex items-center justify-between p-2 md:p-4 md:mx-4">
-                            <a target="_blank" rel="noreferrer noopener" href="https://project.ishreyash.com/">
-                                <div class="flex items-center">
-                                    <div class="text-sm ml-2">
-                                        <p class="text-black leading-none">Shre Yash</p>
-                                        <p class="text-gray-700">February 11, 2022</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a rel="post link" href="posts/demo" class="bg-blue-500 hover:bg-blue-600 text-white rounded-full px-8 py-2">
-                                Read More
-                            </a>
-                        </div>
-                    </div>
+    
+    <section class="text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+            <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="https://raw.githubusercontent.com/ishre-yash/ishre-yash/main/shreyash.webp">
+            <div class="text-center lg:w-2/3 w-full">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 font-poppins font-bold">Shre Yash</h1>
+                <p class="mb-8 leading-relaxed font-poppins">Programming has always been my passion! I have been doing it for years and I enjoy what I do. My best languages are Python ,React , Javascript, HTML, CSS & TailwindCss. However, I can excel in all the languages I provided. I am a fast learner and I believe that any project always needs a lot of testing before it goes through the acceptance testing, since that is what makes projects successful. I am very friendly, and my motto is not to think outside the box but build a bigger box!.</p>
+                <div class="flex justify-center">
+                    <button class="inline-flex text-white bg-black border-0 py-2 px-6 focus:outline-none hover:bg-gray-800 rounded text-lg animate-bounce"><a href="https://github.com/ishre-yash">Github</a></button>
                 </div>
             </div>
-            <div class="container mx-auto px-4 py-4 max-w-xl my-auto">
-                <div class="bg-gray-50 md:bg-white md:shadow-xl rounded-lg mb-6">
-                    <a target="_blank" rel="noreferrer noopener" href="posts/demo">
-                        <div class="md:flex-shrink-0">
-                            <img src="https://cdn.pixabay.com/photo/2018/06/01/15/38/blockchain-3446557__340.jpg" alt="post cover img" class="object-cover h-full w-full rounded-lg rounded-b-none">
-                        </div>
+        </div>
+    </section>
+
+
+
+    <section class="text-gray-600 body-font">
+        <h1 class="font-bold text-2xl md:text-3xl leading-none text-center text-blue-700 font-poppins font-semibold text-4xl">TOP PICKS</h1>
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap -m-4">
+                <div class="p-4 md:w-1/3">
+                    <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                        <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://cdn.pixabay.com/photo/2018/06/01/15/38/blockchain-3446557__340.jpg" alt="blog">
+                        <div class="p-6">
+                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1 font-poppins">CRYPTO</h2>
+                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3 font-poppins">The DOJ $3.6B Bitcoin Seizure Shows How Hard It Is to Launder Crypto</h1>
+                            <p class="leading-relaxed mb-3 font-poppins">A couple allegedly used a “laundry list” of technical measures to cover their tracks. They didnot work.</p>
+                            <div class="flex items-center flex-wrap ">
+                                <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0 font-poppins" href="/posts//demo.html">Learn More
+                      <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14"></path>
+                        <path d="M12 5l7 7-7 7"></path>
+                      </svg>
                     </a>
-                    <div class="py-1">
-                        <div class="p-4">
-                            <h2 class="truncate font-bold mb-2 md:mt-4 text-2xl text-gray-800 tracking-normal">The DOJ’s $3.6B Bitcoin Seizure Shows How Hard It Is to Launder Crypto</h2>
-                            <p class="break-words text-sm text-gray-700 px-2 mr-1">A couple allegedly used a “laundry list” of technical measures to cover their tracks. They didn’t work.</p>
-                        </div>
-                        <div class="flex items-center justify-between p-2 md:p-4 md:mx-4">
-                            <a target="_blank" rel="noreferrer noopener" href="https://project.ishreyash.com/">
-                                <div class="flex items-center">
-                                    <div class="text-sm ml-2">
-                                        <p class="text-black leading-none">Shre Yash</p>
-                                        <p class="text-gray-700">February 11, 2022</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a rel="post link" href="posts/demo" class="bg-blue-500 hover:bg-blue-600 text-white rounded-full px-8 py-2">
-                                Read More
-                            </a>
+                                <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                      <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                      </svg>4.8K
+                    </span>
+                                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                      <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                      </svg>21
+                    </span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+
+                <div class="p-4 md:w-1/3">
+                    <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                        <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://cdn.pixabay.com/photo/2018/01/18/07/31/bitcoin-3089728__340.jpg" alt="blog">
+                        <div class="p-6">
+                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1 font-poppins">CRYPTO</h2>
+                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3 font-poppins">The DOJ $3.6B Bitcoin Seizure Shows How Hard It Is to Launder Crypto</h1>
+                            <p class="leading-relaxed mb-3 font-poppins">A couple allegedly used a “laundry list” of technical measures to cover their tracks. They didnot work.</p>
+                            <div class="flex items-center flex-wrap ">
+                                <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" href="/posts/demo.html font-poppins">Learn More
+                      <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14"></path>
+                        <path d="M12 5l7 7-7 7"></path>
+                      </svg>
+                    </a>
+                                <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                      <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                      </svg>1.8K
+                    </span>
+                                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                      <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                      </svg>13
+                    </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
-
-
-
-
-
-
+        </div>
     </section>
 
 
@@ -188,15 +196,13 @@
                         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home" class="w-4 mr-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                             <path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z">
                             </path>
-                        </svg>
-                        Dehradun , India
+                        </svg> Dehradun , India
                     </p>
                     <a class="flex items-center justify-center md:justify-start mb-4 hover:text-blue-700 hover:underline" href="mailto:iamshreyash.in@gmail.com">
                         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope" class="w-4 mr-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <path fill="currentColor" d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z">
                             </path>
-                        </svg>
-                        iamshreyash.in@gmail.com
+                        </svg> iamshreyash.in@gmail.com
                     </a>
 
                     <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" href="https://ishreyash.com/#contact">
@@ -207,8 +213,7 @@
         </div>
         <div class="text-center p-4 text-gray-500">
             © 2022
-            <a class="text-gray-600 hover:underline" href="https://github.com/ishre-yash">ShreYash.</a>
-            All rights reserved.
+            <a class="text-gray-600 hover:underline" href="https://github.com/ishre-yash">ShreYash.</a> All rights reserved.
         </div>
     </footer>
     <!--==================== JS ====================-->
@@ -221,9 +226,7 @@
             'floating-chat.donateButton.text-color': '#fff'
         });
     </script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="../assets/js/script.js"></script>
 </body>
-
-</html>
