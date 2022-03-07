@@ -4,7 +4,8 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "start": "vite"
+    "start": "vite",
+    "build": "npx tailwindcss -o assets/css/style.css --minify"
   },
   "keywords": [],
   "author": "",
