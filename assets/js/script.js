@@ -23,15 +23,7 @@ var typed = new Typed(".auto-input", {
         loopCount: Infinity
     })
 
-    var typed = new Typed(".auto-input", {
-        strings: [" ", "UI/UX Designer", "React", "Python", "JavaScript"],
-        typeSpeed: 100,
-        backSpeed: 100,
-        loop: true,
-        showCursor: true,
-        cursorChar: "|",
-        loopCount: Infinity,
-      });
+    
       
       kofiWidgetOverlay.draw("ishreyash", {
         type: "floating-chat",
