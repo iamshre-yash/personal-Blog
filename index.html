@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8" />
@@ -20,7 +21,7 @@
     <nav class="w-full">
         <div class="container mx-auto flex flex-wrap items-center justify-between w-full bg-white dark:bg-slate-900 py-0 px-4  text-black dark:text-white" id="nav-content">
             <a href="/">
-                <img class="cursor-pointer" src="https://raw.githubusercontent.com/ishre-yash/ishre-yash/main/logoName.svg" alt="" />
+                <img class="cursor-pointer" src="https://raw.githubusercontent.com/ishre-yash/ishre-yash/main/logoName.svg" alt="ShreYash LOGO" />
             </a>
             <svg xmlns="http://www.w3.org/2000/svg" id="menu-button" class="w-10 cursor-pointer md:hidden block hover:text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -40,11 +41,10 @@
                         <a class="m-6 block font-poppins font-medium text-base hover:text-[#037efe] z-10" href="https://ishreyash.com/#contact">Contact Me</a>
                     </li>
                     <li class="flex justify-center">
-                        <button class="m-6 w-5 h-5 md:w-6 md:h-6 flex items-center transition duration-300" onclick="toggleTheme()">
-                            <div id="switch-toggle"
-                                class="w-5 h-5 md:w-6 md:h-6 relative rounded-full transition duration-500 transform -translate-x-2 text-black dark:text-white">
+                        <div class="m-6 w-5 h-5 md:w-6 md:h-6 flex items-center transition duration-300" onclick="toggleTheme()">
+                            <div id="switch-toggle" class="w-5 h-5 md:w-6 md:h-6 relative rounded-full transition duration-500 transform -translate-x-2 text-black dark:text-white">
                             </div>
-                        </button>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -59,43 +59,61 @@
             <div class="flex justify-center items-center h-full">
                 <div class="text-center text-white px-6 md:px-12">
                     <h1 class="text-5xl font-bold mt-0 mb-6">Shre Yash</h1>
-                    <h3 class="text-3xl font-bold mb-8"><span class="auto-input">Front End Developer</span></h3>
-                    <button class="btn2 mt-12 px-10 py-5 relative border border-white uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-[#037efe]" type="button">
-                            <span class="absolute inset-0 bg-white"></span>
-                            <span class="absolute inset-0 flex justify-center items-center font-bold"> 
-                              Hire Me
-                            </span>
+                    <div class="text-3xl font-bold mb-8"><span class="auto-input">Front End Developer</span></div>
+                    <a class="btn2 mt-12 px-10 py-5 relative border border-white uppercase font-semibold tracking-wider leading-none overflow-hidden hover:text-[#037efe]" type="button" href="https://ishre-yash.github.io/">
+                        <span class="absolute inset-0 bg-white"></span>
+                        <span class="absolute inset-0 flex justify-center items-center font-bold"> 
                             Hire Me
-                          </button>
+                            </span> Hire Me
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!--==================== MAIN ====================-->
-    <main class="w-full">
+    <main class="w-full" style="background: linear-gradient(120deg, rgba(3, 126, 254, 1) 20%, rgba(28, 218, 198, 1) 90%)">
 
 
-        <section class="container mx-auto py-4 p-6 pt-16" style="background: linear-gradient(120deg, rgba(3, 126, 254, 1) 20%, rgba(28, 218, 198, 1) 90%)">
+        <section class="container mx-auto py-4 p-6 pt-16">
             <div class="flex items-center gap-2 mb-3 md:mb-5">
-                <h1 class=" tracking-widest justify-self-start text-xl md:text-3xl font-bold uppercase text-black dark:text-white mb-4">
-                    TOP PICKS</h1>
+                <h1 class=" tracking-widest justify-self-start text-xl md:text-4xl font-bold uppercase text-white mb-4">
+                    TOP PICKS
+                </h1>
             </div>
             <ul class="grid grid-cols-1 md:grid-cols-2 gap-10 w-full mb-10">
                 <li class="w-full">
                     <a href="/posts/page001/001">
-                        <article class=" flex flex-col overflow-hidden rounded-md hover:-translate-y-1 hover:shadow-lg transition duration-200 dark:text-gray-50 group ">
+                        <article class=" flex flex-col overflow-hidden rounded-md hover:-translate-y-1 hover:shadow-lg transition duration-200 text-gray-50 group ">
                             <div class="min-h-32 rounded-b-md overflow-hidden">
                                 <div class="overflow-hidden bg-no-repeat bg-cover ">
                                     <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/newscms/2019_27/2922751/190705-living-in-a-simulation-main-kh.jpg" class="lg:h-48 md:h-36 w-full object-cover object-center hover:scale-110 transition duration-300 ease-in-out"
-                                        alt="Louvre" />
-
-
+                                        alt="Blog Post" />
                                 </div>
 
                             </div>
                             <section class=" p-5 pt-2">
-                                <div class="divide-x dark:divide-gray-500 flex items-center mt-1 gap-1 text-xs text-gray-600 dark:text-gray-300">
+                                <div class="divide-x divide-gray-500 flex items-center mt-1 gap-1 text-xs text-gray-300">
+                                    <span> 01 March 2022</span>
+                                </div>
+                                <h2 class="text-lg line-clamp-2 font-semibold mt-2">Of Course We’re Living in a Simulation
+                                </h2>
+                            </section>
+                        </article>
+                    </a>
+                </li>
+                <li class="w-full">
+                    <a href="/posts/page001/001">
+                        <article class=" flex flex-col overflow-hidden rounded-md hover:-translate-y-1 hover:shadow-lg transition duration-200 text-gray-50 group ">
+                            <div class="min-h-32 rounded-b-md overflow-hidden">
+                                <div class="overflow-hidden bg-no-repeat bg-cover ">
+                                    <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/newscms/2019_27/2922751/190705-living-in-a-simulation-main-kh.jpg" class="lg:h-48 md:h-36 w-full object-cover object-center hover:scale-110 transition duration-300 ease-in-out"
+                                        alt="Blog Post" />
+                                </div>
+
+                            </div>
+                            <section class=" p-5 pt-2">
+                                <div class="divide-x divide-gray-500 flex items-center mt-1 gap-1 text-xs text-gray-300">
                                     <span> 01 March 2022</span>
                                 </div>
                                 <h2 class="text-lg line-clamp-2 font-semibold mt-2">Of Course We’re Living in a Simulation
@@ -105,26 +123,7 @@
                     </a>
                 </li>
 
-                <li class="w-full undefined">
-                    <a href="/posts/page001/001">
-                        <article class=" flex flex-col overflow-hidden rounded-md hover:-translate-y-1 hover:shadow-lg transition duration-200 dark:text-gray-50 group ">
-                            <div class="min-h-32 rounded-b-md overflow-hidden">
-                                <div class="hover:opacity-80 transition ">
-                                    <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://cdn.pixabay.com/photo/2018/01/18/07/31/bitcoin-3089728__340.jpg" alt="blog" />
 
-                                </div>
-
-                            </div>
-                            <section class="p-5 pt-2">
-                                <div class="divide-x dark:divide-gray-500 flex items-center mt-1 gap-1 text-xs text-gray-600 dark:text-gray-300">
-                                    <span> 01 March 2022</span>
-                                </div>
-                                <h2 class="text-lg line-clamp-2 font-semibold mt-2">The DOJ $3.6B Bitcoin Seizure Shows How Hard It Is to Launder Crypto
-                                </h2>
-                            </section>
-                        </article>
-                    </a>
-                </li>
 
             </ul>
 
@@ -139,7 +138,7 @@
     <footer class="text-center lg:text-left bg-white dark:bg-slate-900 border-t border-t-black dark:border-white shadow">
         <div class="flex justify-center items-center lg:justify-between p-6 border-b border-black dark:border-white">
             <div class="mr-12 hidden lg:block">
-                <img src="https://raw.githubusercontent.com/ishre-yash/ishre-yash/main/logo.svg" alt="logo" />
+                <img src="https://raw.githubusercontent.com/ishre-yash/ishre-yash/main/logoName.svg" alt="logo" />
             </div>
             <div class="flex justify-center">
                 <a class="mr-6" href="https://github.com/ishre-yash"><svg
@@ -176,33 +175,33 @@
             <div class="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center pt-6">
                     <img src="https://raw.githubusercontent.com/ishre-yash/ishre-yash/main/shreyash.webp" class="rounded-full w-32 mb-4 mx-auto " alt="ShreYash" />
-                    <h5 class="text-xl font-medium leading-tight mb-2">ShreYash</h5>
+                    <div class="text-xl font-medium leading-tight mb-2">ShreYash</div>
                     <span class="auto-input">Front End Developer</span>
                 </div>
 
                 <div class="">
-                    <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+                    <div class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
                         MORE FROM SHRE YASH
-                    </h6>
+                    </div>
                     <p class="mb-4 hover:scale-105">
-                        <a href="https://github.com/ishre-yash" class=" hover:text-blue-500 hover:underline">Github</a>
+                        <a href="https://github.com/ishre-yash" class=" hover:text-[#037efe] hover:underline">Github</a>
                     </p>
                     <p class="mb-4 hover:scale-105">
-                        <a href="https://project.ishreyash.com/" class="hover:text-blue-500 hover:underline">About</a>
+                        <a href="https://project.ishreyash.com/" class="hover:text-[#037efe] hover:underline">About</a>
                     </p>
                 </div>
                 <div class="">
-                    <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+                    <div class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
                         Useful links
-                    </h6>
+                    </div>
                     <p class="mb-4 hover:scale-105">
-                        <a href="/sitemap.xml" class=" hover:text-blue-500 hover:underline">Site Map</a>
+                        <a href="/sitemap.xml" class=" hover:text-[#037efe] hover:underline">Site Map</a>
                     </p>
                 </div>
                 <div class="">
-                    <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+                    <div class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
                         Contact
-                    </h6>
+                    </div>
                     <p class="flex items-center justify-center md:justify-start mb-4">
                         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home" class="w-4 mr-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                             <path fill="currentColor"
@@ -210,7 +209,7 @@
                             </path>
                         </svg> Dehradun , India
                     </p>
-                    <a class="flex items-center justify-center md:justify-start mb-4 hover:text-blue-500 hover:underline hover:scale-105" href="mailto:iamshreyash.in@gmail.com">
+                    <a class="flex items-center justify-center md:justify-start mb-4 hover:text-[#037efe] hover:underline hover:scale-105" href="mailto:iamshreyash.in@gmail.com">
                         iamshreyash.in@gmail.com
                     </a>
                     <div class="hover:scale-105 mt-4">
@@ -236,7 +235,9 @@
             "floating-chat.donateButton.text-color": "#fff",
         });
     </script>
-
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="../assets/js/script.js"></script>
+
 </body>
+
+</html>
