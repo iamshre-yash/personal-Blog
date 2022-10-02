@@ -1,0 +1,61 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import BlogHead from "../components/Blog/BlogHead.astro";
+import Footer from "../components/Footer.astro";
+
+export interface Props {
+  content: {
+    title: string;
+    description: string;
+    pubDate?: string;
+    cover_image?: string;
+    author?: string;
+    authorImg?: string;
+    authorLink?: string;
+  };
+}
+
+const {
+  content: {
+    title,
+    description,
+    pubDate,
+    cover_image,
+    author,
+    authorImg,
+    authorLink,
+  },
+} = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} image={cover_image} />
+  </head>
+
+  <body>
+    <Header />
+    <main class="mx-auto w-full">
+      <BlogHead
+        title={title}
+        description={description}
+        pubDate={pubDate}
+        cover_image={cover_image}
+        author={author}
+        authorImg={authorImg}
+        authorLink={authorLink}
+      />
+      <section class="relative mx-auto flex max-w-7xl flex-col sm:flex-row">
+        <article
+          class="prose mx-auto mt-6 max-w-4xl px-4 prose-h2:leading-6 prose-h2:tracking-wide prose-h2:text-gray-900 prose-p:text-gray-700 prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-blockquote:border-blue-600 prose-blockquote:bg-blue-600 prose-blockquote:bg-opacity-10 prose-strong:font-bold prose-strong:text-gray-800 prose-li:marker:text-gray-900 prose-img:mx-auto prose-img:rounded-xl sm:w-full lg:prose-lg"
+        >
+          <slot />
+        </article>
+        <!-- <TableOfContent client:visible /> -->
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>

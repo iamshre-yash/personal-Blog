@@ -1,0 +1,49 @@
+---
+const { post } = Astro.props;
+---
+
+<div
+  class="group overflow-hidden rounded-3xl bg-white shadow-md transition duration-300 hover:-translate-y-1"
+>
+  <a href={post.url}>
+    <img
+      src={post.frontmatter.cover_image}
+      alt={post.frontmatter.title}
+      class="h-64 w-full object-cover"
+    />
+  </a>
+
+  <div class="p-5">
+    <p class="mb-3 text-xs font-semibold uppercase tracking-wide">
+      <a
+        href={`/${post.frontmatter.category}`}
+        class="text-blue-500 hover:underline"
+      >
+        {post.frontmatter.category}
+      </a> -
+      <time datetime={post.frontmatter.pubDate}>
+        {
+          new Date(post.frontmatter.pubDate).toLocaleDateString("en-us", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          })
+        }
+      </time>
+    </p>
+    <h4
+      class="pb-3 inline-block text-2xl font-bold leading-5 line-clamp-2 md:line-clamp-1"
+    >
+      {post.frontmatter.title}
+    </h4>
+    <p class="mb-2 text-gray-700 line-clamp-2">
+      {post.frontmatter.description}
+    </p>
+    <a
+      href={post.url}
+      class="inline-flex items-center font-semibold text-blue-500 transition-colors duration-200 group-hover:underline"
+    >
+      read more...
+    </a>
+  </div>
+</div>
