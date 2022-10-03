@@ -1,7 +1,6 @@
 ---
 import Main from "@layouts/Main.astro";
 import BlogCard from "@blog/BlogCard.astro";
-
 const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
   (a, b) =>
     new Date(b.frontmatter.pubDate).valueOf() -
