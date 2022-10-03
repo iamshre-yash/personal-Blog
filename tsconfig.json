@@ -1,3 +1,12 @@
 {
-  "extends": "astro/tsconfigs/strict"
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@layouts/*": ["src/layouts/*"],
+      "@components/*": ["src/components/*"],
+      "@navigation/*": ["src/components/navigation/*"],
+      "@common/*": ["src/components/common/*"],
+      "@blog/*": ["src/components/blog/*"]
+    }
+  }
 }

@@ -1,8 +1,8 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import BlogCard from "../components/Blog/BlogCard.astro";
-import Footer from "../components/Footer.astro";
+import BaseHead from "@components/BaseHead.astro";
+import Header from "@navigation/Header.astro";
+import BlogCard from "@blog/BlogCard.astro";
+import Footer from "@navigation/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
 const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
@@ -10,6 +10,16 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
     new Date(b.frontmatter.pubDate).valueOf() -
     new Date(a.frontmatter.pubDate).valueOf()
 );
+
+//see all category
+const tags = [
+  ...new Set(
+    [].concat.apply(
+      [],
+      posts.map((post) => post.frontmatter.category)
+    )
+  ),
+];
 ---
 
 <!DOCTYPE html>
@@ -20,12 +30,28 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
   <body>
     <Header />
     <main>
-      <section>
+      <section class="mx-auto max-w-7xl">
         <h2
-          class="mx-auto max-w-7xl px-4 pt-[90px] text-2xl font-bold tracking-wider sm:text-4xl"
+          class="pt-12 text-2xl font-black tracking-wider sm:text-4xl text-gray-900 px-4"
         >
-          Blogs
+          Recent Blogs
         </h2>
+        <ul class="mt-8 flex gap-4 max-w-7xl flex-wrap px-4">
+          <li class="text-gray-800 font-semibold">Category:</li>
+          {
+            tags.map((tag) => (
+              <li>
+                <a
+                  class="leading-sm inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-xs font-bold uppercase text-blue-600 hover:bg-blue-200 hover:text-blue-700"
+                  href={`/blog/${tag}`}
+                  title={`View posts category under "${tag}"`}
+                >
+                  {tag}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
         <ul
           class="row-gap-5 mx-auto grid max-w-7xl gap-8 py-10 px-4 lg:grid-cols-3"
         >

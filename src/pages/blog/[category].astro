@@ -1,0 +1,64 @@
+---
+import BlogCard from "@blog/BlogCard.astro";
+import Main from "@layouts/Main.astro";
+
+export async function getStaticPaths({ paginate }) {
+  const posts = (await Astro.glob("./*.{md,mdx}")).sort(
+    (a, b) =>
+      new Date(b.frontmatter.pubDate).valueOf() -
+      new Date(a.frontmatter.pubDate).valueOf()
+  );
+
+  const tags = [
+    ...new Set(
+      [].concat.apply(
+        [],
+        posts.map((post) => post.frontmatter.category)
+      )
+    ),
+  ];
+
+  return tags.map((tag) => {
+    return {
+      params: {
+        category: tag,
+      },
+      props: {
+        tag,
+      },
+    };
+  });
+}
+const { tag } = Astro.props;
+
+const posts = (await Astro.glob("./*.{md,mdx}"))
+  .filter((post) => post.frontmatter.category === tag)
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.pubDate).valueOf() -
+      new Date(a.frontmatter.pubDate).valueOf()
+  );
+---
+
+<Main title={`ShreYash - ${tag}`}>
+  <main>
+    <section class="mx-auto max-w-7xl">
+      <h2
+        class="pt-12 capitalize text-2xl font-black tracking-wider sm:text-4xl text-gray-900 px-4"
+      >
+        {tag}
+      </h2>
+      <ul
+        class="row-gap-5 mx-auto grid max-w-7xl gap-8 py-10 px-4 lg:grid-cols-3"
+      >
+        {
+          posts.map((post) => (
+            <li>
+              <BlogCard post={post} />
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
+</Main>

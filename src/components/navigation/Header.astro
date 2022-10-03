@@ -1,7 +1,6 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
-import PrimaryBtn from "./common/Button/PrimaryBtn.astro";
-import { SITE_TITLE } from "../config";
+import PrimaryBtn from "@common/Button/PrimaryBtn.astro";
 ---
 
 <header class="bg-white">
@@ -12,7 +11,7 @@ import { SITE_TITLE } from "../config";
       <img
         src="https://raw.githubusercontent.com/ishre-yash/ishre-yash/main/logo.svg"
         class="h-10"
-        alt={SITE_TITLE}
+        alt="ShreYash"
       />
     </a>
     <div class="lg:hidden">
@@ -65,6 +64,7 @@ import { SITE_TITLE } from "../config";
       title="Get Started"
       class="hidden lg:inline-block lg:ml-auto lg:mr-3"
     />
+    <!-- <PrimaryBtn href="#" title="Get Started" class="hidden lg:inline-block" /> -->
   </nav>
 
   <div class="navbar-menu relative z-50 hidden">
@@ -77,7 +77,7 @@ import { SITE_TITLE } from "../config";
           <img
             src="https://raw.githubusercontent.com/ishre-yash/ishre-yash/main/logo.svg"
             class="h-12"
-            alt={SITE_TITLE}
+            alt="ShreYash"
           />
         </a>
         <button class="navbar-close">

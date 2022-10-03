@@ -16,7 +16,7 @@ const { post } = Astro.props;
   <div class="p-5">
     <p class="mb-3 text-xs font-semibold uppercase tracking-wide">
       <a
-        href={`/${post.frontmatter.category}`}
+        href={`/blog/${post.frontmatter.category}`}
         class="text-blue-500 hover:underline"
       >
         {post.frontmatter.category}
