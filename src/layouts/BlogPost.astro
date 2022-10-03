@@ -32,6 +32,21 @@ const {
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} image={cover_image} />
+    <!-- Google tag (gtag.js) -->
+    <script
+      is:inline
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-R6K52GYKZX"
+    ></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-R6K52GYKZX");
+    </script>
   </head>
 
   <body>

@@ -3,6 +3,7 @@ import BaseHead from "@components/BaseHead.astro";
 import Header from "@navigation/Header.astro";
 import BlogCard from "@blog/BlogCard.astro";
 import Footer from "@navigation/Footer.astro";
+import Main from "@layouts/Main.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
 const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
@@ -22,49 +23,41 @@ const tags = [
 ];
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <BaseHead title="ShreYash - blogs" description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header />
-    <main>
-      <section class="mx-auto max-w-7xl">
-        <h2
-          class="pt-12 text-2xl font-black tracking-wider sm:text-4xl text-gray-900 px-4"
-        >
-          Recent Blogs
-        </h2>
-        <ul class="mt-8 flex gap-4 max-w-7xl flex-wrap px-4">
-          <li class="text-gray-800 font-semibold">Category:</li>
-          {
-            tags.map((tag) => (
-              <li>
-                <a
-                  class="leading-sm inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-xs font-bold uppercase text-blue-600 hover:bg-blue-200 hover:text-blue-700"
-                  href={`/blog/${tag}`}
-                  title={`View posts category under "${tag}"`}
-                >
-                  {tag}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-        <ul
-          class="row-gap-5 mx-auto grid max-w-7xl gap-8 py-10 px-4 lg:grid-cols-3"
-        >
-          {
-            posts.map((post) => (
-              <li>
-                <BlogCard post={post} />
-              </li>
-            ))
-          }
-        </ul>
-      </section>
-    </main>
-    <Footer />
-  </body>
-</html>
+<Main title="ShreYash - Home">
+  <main>
+    <section class="mx-auto max-w-7xl">
+      <h2
+        class="pt-12 text-2xl font-black tracking-wider sm:text-4xl text-gray-900 px-4"
+      >
+        Recent Blogs
+      </h2>
+      <ul class="mt-8 flex gap-4 max-w-7xl flex-wrap px-4">
+        <li class="text-gray-800 font-semibold">Category:</li>
+        {
+          tags.map((tag) => (
+            <li>
+              <a
+                class="leading-sm inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-xs font-bold uppercase text-blue-600 hover:bg-blue-200 hover:text-blue-700"
+                href={`/blog/${tag}`}
+                title={`View posts category under "${tag}"`}
+              >
+                {tag}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <ul
+        class="row-gap-5 mx-auto grid max-w-7xl gap-8 py-10 px-4 lg:grid-cols-3"
+      >
+        {
+          posts.map((post) => (
+            <li>
+              <BlogCard post={post} />
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
+</Main>
