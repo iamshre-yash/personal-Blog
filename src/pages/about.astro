@@ -3,6 +3,10 @@ import Main from "@layouts/Main.astro";
 import Hero from "@components/about/hero.astro";
 import Map from "@components/about/map.astro";
 import Title from "@common/TitleSection.astro";
+import Values from "@components/about/values.astro";
+import Mission from "@components/about/mission.astro";
+import Team from "@components/about/team.astro";
+import Join from "@components/about/join.astro";
 ---
 
 <Main title="ShreYash - About">
@@ -11,6 +15,11 @@ import Title from "@common/TitleSection.astro";
     subtitle="We aim to reinvent the industry"
     description="The people who build a great company have a positive impact on the world."
   />
-  <Hero />
+  <Values />
   <Map />
+  <Mission />
+  <Team />
+  <Join />
+
+  <!-- <Hero /> -->
 </Main>
