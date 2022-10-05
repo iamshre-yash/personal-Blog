@@ -1,10 +1,7 @@
 ---
-import BaseHead from "@components/BaseHead.astro";
-import Header from "@navigation/Header.astro";
 import BlogCard from "@blog/BlogCard.astro";
-import Footer from "@navigation/Footer.astro";
 import Main from "@layouts/Main.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import Title from "@common/TitleSection.astro";
 
 const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
   (a, b) =>
@@ -24,6 +21,10 @@ const tags = [
 ---
 
 <Main title="ShreYash - Home">
+  <Title
+    subtitle="Insights & Reflections"
+    description="Lean into our thoughts and perspectives on the future of work, remote culture, technology, collaboration and much more."
+  />
   <main>
     <section class="mx-auto max-w-7xl">
       <h2
