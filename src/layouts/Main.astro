@@ -15,6 +15,10 @@ const { title, description } = Astro.props;
 <html lang="en" class="scroll-smooth">
   <head>
     <BaseHead title={title} description={description} />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <!-- Google tag (gtag.js) -->
     <script
       is:inline
@@ -36,5 +40,8 @@ const { title, description } = Astro.props;
     <div class="w-full h-[72px]"></div>
     <slot />
     <Footer />
+    <script is:inline>
+      AOS.init({ offset: 120, delay: 50, duration: 500 });
+    </script>
   </body>
 </html>
