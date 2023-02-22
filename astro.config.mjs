@@ -8,7 +8,7 @@ import prefetch from "@astrojs/prefetch";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://ishre-yash.github.io',
-  base: '/ishre-yash',
+  base: '/',
   integrations: [mdx(), sitemap(), tailwind({
     config: { applyBaseStyles: false },
   }), prefetch()]
