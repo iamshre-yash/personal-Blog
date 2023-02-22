@@ -1,8 +1,12 @@
 {
   "name": "ishreyash",
   "type": "module",
-  "version": "1.0.0",
-  "private": true,
+  "version": "0.0.1",
+  "license": "ISC",
+  "author": {
+    "name": "ishreyash",
+    "email": "ishreyash.com@gmail.com"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,19 +15,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^0.11.1",
-    "@astrojs/rss": "^1.0.1",
-    "@astrojs/sitemap": "^1.0.0",
-    "@astrojs/tailwind": "^2.0.1",
-    "astro": "^1.2.6",
-    "tailwindcss": "^3.1.8"
-  },
-  "devDependencies": {
-    "@tailwindcss/line-clamp": "^0.4.2",
-    "@tailwindcss/typography": "^0.5.7",
-    "autoprefixer": "^10.4.12",
-    "date-fns": "^2.29.3",
-    "prettier": "^2.7.1",
-    "prettier-plugin-tailwindcss": "^0.1.13"
+    "@astrojs/mdx": "^0.17.0",
+    "@astrojs/prefetch": "^0.1.2",
+    "@astrojs/rss": "^2.1.1",
+    "@astrojs/sitemap": "^1.0.1",
+    "@astrojs/tailwind": "^3.0.1",
+    "astro": "^2.0.14",
+    "tailwindcss": "^3.0.24"
   }
 }

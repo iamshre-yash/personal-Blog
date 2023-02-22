@@ -1,0 +1,19 @@
+---
+export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {}
+const { href, title, class: className } = Astro.props;
+---
+
+<a
+  class:list={[
+    className,
+    "group relative inline-block text-sm font-medium text-blue-600 focus:outline-none focus:ring active:text-blue-500",
+  ]}
+  href={href}
+>
+  <span class="absolute inset-0 border border-current"></span>
+  <span
+    class="block border border-current bg-white px-12 py-3 transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1"
+  >
+    {title}
+  </span>
+</a>

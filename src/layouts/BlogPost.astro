@@ -1,77 +1,51 @@
 ---
-import BaseHead from "@components/BaseHead.astro";
-import Header from "@navigation/Header.astro";
-import BlogHead from "@blog/BlogHead.astro";
-import Footer from "@navigation/HeaderLink.astro";
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
 
-export interface Props {
-  content: {
-    title: string;
-    description: string;
-    pubDate?: string;
-    cover_image?: string;
-    author?: string;
-    authorImg?: string;
-    authorLink?: string;
-  };
-}
+type Props = CollectionEntry<'blog'>['data'];
 
-const {
-  content: {
-    title,
-    description,
-    pubDate,
-    cover_image,
-    author,
-    authorImg,
-    authorLink,
-  },
-} = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
 <html lang="en">
-  <head>
-    <BaseHead title={title} description={description} image={cover_image} />
-    <!-- Google tag (gtag.js) -->
-    <script
-      is:inline
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-R6K52GYKZX"
-    ></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+	<head>
+		<BaseHead title={title} description={description} />
+		<style>
+			.title {
+				font-size: 2em;
+				margin: 0.25em 0 0;
+			}
+			hr {
+				border-top: 1px solid #ddd;
+				margin: 1rem 0;
+			}
+			.last-updated-on {
+				font-style: italic;
+			}
+		</style>
+	</head>
 
-      gtag("config", "G-R6K52GYKZX");
-    </script>
-  </head>
-
-  <body>
-    <Header />
-    <div class="w-full h-[72px]"></div>
-    <main class="mx-auto w-full">
-      <BlogHead
-        title={title}
-        description={description}
-        pubDate={pubDate}
-        cover_image={cover_image}
-        author={author}
-        authorImg={authorImg}
-        authorLink={authorLink}
-      />
-      <section class="relative mx-auto flex max-w-7xl flex-col sm:flex-row">
-        <article
-          class="prose mx-auto mt-6 max-w-4xl px-4 prose-h2:leading-6 prose-h2:tracking-wide prose-h2:text-gray-900 prose-p:text-gray-700 prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-blockquote:border-blue-600 prose-blockquote:bg-blue-600 prose-blockquote:bg-opacity-10 prose-strong:font-bold prose-strong:text-gray-800 prose-li:marker:text-gray-900 prose-img:mx-auto prose-img:rounded-xl sm:w-full lg:prose-lg"
-        >
-          <slot />
-        </article>
-        <!-- <TableOfContent client:visible /> -->
-      </section>
-    </main>
-
-    <Footer />
-  </body>
+	<body>
+		<Header />
+		<main>
+			<article>
+				{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
+				<h1 class="title">{title}</h1>
+				<FormattedDate date={pubDate} />
+				{
+					updatedDate && (
+						<div class="last-updated-on">
+							Last updated on <FormattedDate date={updatedDate} />
+						</div>
+					)
+				}
+				<hr />
+				<slot />
+			</article>
+		</main>
+		<Footer />
+	</body>
 </html>
